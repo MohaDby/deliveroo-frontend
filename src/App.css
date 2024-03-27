@@ -4,6 +4,7 @@
 
 body {
   background-color: #f2f5f5;
+  font-family: "Stratos Deliveroo Web";
 }
 
 h2 {
@@ -21,53 +22,108 @@ header {
   height: 60px;
 }
 
+header .container {
+  display: flex;
+  height: 60px;
+  align-items: center;
+}
+
+header .logo {
+  width: 150px;
+}
+
 .restInfos {
   background-color: white;
+  height: 250px;
+  margin-bottom: 30px;
 }
 
 .restInfos .container {
-  display: flex;
+  display: grid;
+  grid-template-columns: 65% auto;
+  justify-content: space-between;
+  height: 100%;
+  padding: 30px 0;
 }
 
-.card {
+.restInfos h2 {
+  font-size: 32px;
+  font-weight: 600;
+  color: #2e3333;
+}
+
+.restInfos-text {
+  display: grid;
+  align-items: center;
+}
+
+.restInfos p {
+  font-family: "IBM Plex Sans";
+  font-size: 20px;
+  color: #868a8a;
+}
+
+.restInfos img {
+  display: flex;
+  justify-content: flex-end;
+  width: 350px;
+  border-radius: 5px;
+}
+
+main .container {
+  display: grid;
+  grid-template-columns: 70% auto;
+}
+
+main .categories h2 {
+  margin-bottom: 20px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.cards-items {
   min-width: 300px;
   padding: 0 10px 25px;
   width: 50%;
 }
 
-.card-item {
-  align-items: flex-start;
-  background-color: white;
-  border-radius: 5px;
+.card {
   cursor: pointer;
   display: flex;
-  flex-direction: row;
-  height: 160px;
+  justify-content: space-between;
   padding: 15px;
-  transition-duration: 0.3s;
+  background-color: white;
+  font-family: "IBM Plex Sans";
+  height: 160px;
 }
 
 .card-text {
   flex: 1 1;
-  margin-right: 15px;
+  align-content: space-between;
+  min-width: 300px;
 }
-.card-text p {
+.card h3 {
+  font-size: 20px;
+}
+.card-text > p {
   color: #808484;
-  font-size: 20spx;
+  font-size: 0.9rem;
+  height: 2.6rem;
+  line-height: 1.3rem;
   margin: 0 0 1rem;
+
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.card-picture {
-  border-radius: 5px;
-  height: 130px;
-  width: 130px;
-}
-
 .card img {
   height: 100%;
-  object-fit: cover;
   width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
 }
 
 .details {
@@ -76,4 +132,9 @@ header {
 
 .details > div {
   display: flex;
+}
+
+.cart {
+  background-color: white;
+  width: 100%;
 }
